@@ -1,0 +1,84 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    margin-left: 30%;
+    margin-top: 200px;
+}
+
+.start {
+    background-color: rgb(0, 153, 255);
+    border: none;
+    text-align: center;
+    width: 100px;
+    padding: 16px 0px 16px 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.start:hover {
+    background-color: rgb(3, 91, 150);
+    color: white;
+    cursor: pointer;
+}
+
+.pause {
+    background-color: white;
+    border: 2px solid rgb(3, 140, 231);
+    text-align: center;
+    width: 100px;
+    padding: 16px 0px 16px 0px;
+    border-radius: 10px;
+    color: rgb(3, 140, 231);
+    font-size: 14px;
+}
+
+.pause:hover {
+    background-color: rgb(3, 91, 150);
+    border: 2px solid rgb(3, 91, 150);
+    color: white;
+    cursor: pointer;
+}
+
+.scoreStatus {
+    display: flex;
+    gap: 32px;
+}
+
+.score {
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(3, 140, 231);
+}
+
+.status {
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(3, 140, 231);
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(3, 140, 231);
+    margin-top: 20px;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.snake {
+    background-color: rgb(61, 61, 61);
+}
+
+.apple {
+    background-color: rgb(8, 158, 65);
+    border-radius: 100px;
+}
