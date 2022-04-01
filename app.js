@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         interval = setInterval(moveOutcomes, intervalTime)
     }
 
+
     //function that deals with all the over outcomes of the snake
     function moveOutcomes() {
         //deals with snake hitting border and snake hitting self
@@ -69,6 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[currentSnake[0]].classList.add('snake')
     }
 
+
+    //pause and resume game
+    let paused = false;
+
+    function PauseResume() {
+        if (paused === false) {
+            clearInterval(interval);
+            paused = true;
+            statusDisplay.style.color = "#ebc334"
+            statusDisplay.textContent = 'Paused'
+        } else if (paused === true) {
+            statusDisplay.style.color = "rgb(39, 170, 89)"
+            statusDisplay.textContent = 'Playing'
+            interval = setInterval(function() {
+                requestAnimationFrame(moveOutcomes)
+            }, intervalTime)
+            paused = false;
+        }
+    }
+
+
+
     //generate new apple once apple is eaten
     function randomApple() {
         do {
@@ -95,5 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keyup', control)
     startBtn.addEventListener('click', startGame)
+    pauseBtn.addEventListener('click', PauseResume)
 
 })
