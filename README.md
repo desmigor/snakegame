@@ -1,5 +1,5 @@
 # Snake Game
-This is a Nokia 3310 SNAKE game implemented in HTML,CSS and JS
+This is a Nokia 3310 SNAKE game implemented in HTML,CSS and JS.
 The game has the following features/functionalities:
 
 1. Start/Restart game
